@@ -109,14 +109,18 @@ class Predator{
         }
         setCamera(camera)
 
+        rotateZ( -Math.atan2( this.velocity.x, this.velocity.y ))
+        rotateX(  Math.atan2( this.velocity.z, Math.sqrt(Math.pow(this.velocity.y, 2) + Math.pow(this.velocity.x, 2))))
+        
+
         //rotate(this.velocity.heading())
         //rotateZ(Math.atan2( this.velocity.y, this.velocity.x ))
         //rotateY(Math.atan2( this.velocity.mag(), this.velocity.x ))
         noStroke()
         fill('red')
-        sphere(2.5 * this.scale)
+        //sphere(2.5 * this.scale)
         //pointLight(255, 0, 0, 0, 0, 0)
-        //cone(2.5 * this.scale, 10 * this.scale)
+        cone(2.5 * this.scale, 10 * this.scale)
         pop()
     }
 

@@ -164,8 +164,8 @@ class Boid{
             circle(0, 0, this.perceptionRange)
             pop()
         }
-        //rotateZ( -Math.atan2( this.velocity.x, this.velocity.y ))
-        //rotateX( Math.atan2( this.velocity.y, this.velocity.z ))
+        rotateZ( -Math.atan2( this.velocity.x, this.velocity.y ))
+        rotateX(  Math.atan2( this.velocity.z, Math.sqrt(Math.pow(this.velocity.y, 2) + Math.pow(this.velocity.x, 2))))
         //rotateY( -Math.atan2(this.velocity.z, this.velocity.x) )
 
         // push()
@@ -178,10 +178,10 @@ class Boid{
         // pop()
 
         noStroke()
-        sphere(2.5 * this.scale)
-        //cone(2.5 * this.scale, 10 * this.scale)
-        // stroke('white')
-        // line(0, 0, 0, this.velocity.x * this.scale * 5, this.velocity.y * this.scale * 5, this.velocity.z * this.scale * 5)
+        //sphere(2.5 * this.scale)
+        cone(2.5 * this.scale, 10 * this.scale)
+        //stroke('red')
+        //line(0, 0, 0, this.velocity.x * this.scale * 5, this.velocity.y * this.scale * 5, this.velocity.z * this.scale * 5)
         pop()
     }
 
