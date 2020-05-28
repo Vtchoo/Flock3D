@@ -12,7 +12,7 @@ const totalPredators = 1
 const boxSize = {
     x: 1000,
     y: 500,
-    z: 500
+    z: 1000
 }
 const center = {
     x: 0,
@@ -83,6 +83,9 @@ function draw(){
 
     if(renderLights)
         pointLight(255,255,255, 1,0,0)
+
+    if(!firstPersonCamera)
+        orbitControl()
 
     for (const boid of boids) {
         //boid.Align(boids)

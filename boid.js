@@ -166,7 +166,7 @@ class Boid{
         }
         //rotateZ( -Math.atan2( this.velocity.x, this.velocity.y ))
         //rotateX( Math.atan2( this.velocity.y, this.velocity.z ))
-        
+        //rotateY( -Math.atan2(this.velocity.z, this.velocity.x) )
 
         // push()
         // stroke('green')
